@@ -1,0 +1,19 @@
+---
+title: "Prueba"
+date: 2019-02-22T22:57:41-07:00
+draft: False
+---
+
+Esta es una prueba de sitio.
+
+* Títulos grandes
+Está creado con org-mode, no markdown, eso significa que hay mucha mejor *compatibilidad* en /emacs/.
+
+** Subtítulos
+Para hacerlo más completo.
+
+#+BEGIN_QUOTE
+MUDA MUDA MUDA MUDA!
+#+END_QUOTE
+
+Fin :^)
