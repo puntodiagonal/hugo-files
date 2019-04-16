@@ -1,0 +1,38 @@
+---
+title: "Gestores de archivos en terminal"
+date: 2019-04-16T12:57:48-06:00
+draft: true
+---
+
+Generalmente, al instalar un entorno de escritorio este viene con su gestor de archivos el cual usamos porque, o nos gusta, o como es el que viene y se integra bien ese dejamos. Sin embargo, hay una gran cantidad de gestores de archivos disponibles, no solo gráficos, sino también basados en terminal, y es bueno conocer estas opciones porque nos permiten tener un panorama más amplio de lo que hay disponible.
+
+*** ¿Por qué utilizar un gestor de archivos en terminal en lugar de simplemente comandos (ls, rm, cp, mv, etc.)
+  Esta pregunta es muy común, y tiene sentido hacérsela. ¿Por qué usar un gestor de archivos si bash ya hace el trabajo? La respuesta es facilidad. Hay trabajos que son complicados de hacer vía terminal, por ejemplo, dentro de una carpeta seleccionar ciertos archivos específicos para moverlos a otra carpeta. Es una tarea que podemos hacer en terminal pero hay que escribir los nombres de cada archivo, e incluso con el autocompletado, puede ser enfadoso, es mucho más rápido y sencillo marcar los archivos en una interfaz y presionar el comando de copiar y pegar. Y ¿Por qué no usar un gestor gráfico entonces? Las aplicaciones en terminal (generalmente) suelen ser más rápidas, además se manejan con el teclado, esto permite aumentar tu eficiencia al no tener que cambiar al ratón para abrir un texto y regresar al teclado para escribir en él, las aplicaciones TUI están disponibles cuando no tenemos un servidor gráfico instalado por lo que pueden hacer más fácil la vida a quienes trabajan directamente en la terminal.
+
+  En lo personal he probado varios gestores de archivos en terminal, estas son mis opiniones de los que he probado.
+
+*** Midnight Commander (MC)
+[[file:/img/fm-mc.png]]
+  Un gestor de archivos bastante popular, desarrollado por uno de los creadores de GNOME. Es un gestor de archivos completo, podemos usar el ratón en él, permite descomprimir archivos, renombrar varios archivos a la vez (batch rename) y tiene una interfaz sencilla y fácil de usar donde vemos los comandos más importantes en la parte inferior, similar a nano. Su desventaja principal para mi quizá sea que intenta demasiado llevar una GUI a la terminal y como resultado, moverse con el teclado llega a ser tan poco pŕactico como en una aplicación gráfica.
+
+*** Ranger
+[[file:/img/fm-ranger.png]]
+Uno de los más popular en estos últimos días. Ranger está escrito en python en incorpora una enorme cantidad de opciones bastante interesantes, como prevsualizar archivos, incluidos videos e imágenes. Su movimiento intenta imitar al de vim, por lo que podemos copiar con dd, pegar con pp, movernos con hjkl y demás cosas que a los usuarios de vim les encanta. Ranger es muy personalizable y podemos agregar scripts a la configuración para tener accesos directos personalizados. Mi problema con Ranger es que en ocasiones se alenta mucho en mi PC, al estar hecho en python, puede tardar varios segundos en abrir y se siente un gran lag al movernos, lag que desaparece un poco si quito previsualizaciones y resaltados de colores, pero eso me lleva a capar características muy valiosas del programa.
+  
+*** lf
+[[file:/img/fm-lf.png]]
+lf pretende ser un clon de Ranger pero escrito en go, con esto logran resolver la principal desventaja de Ranger. Además de eso, lf, añade características extras como variables que podemos activar o desactivar y una manera diferente para crear scripts, basada en bash; pero quita otras opciones presentes en ranger, como la previsualización de imágenes. lf está en desarrollo constante, en ocasiones se siente un poco buggy pero nada del otro mundo y es una gran alternativa a Ranger.
+
+*** vifm
+[[file:/img/fm-vifm.png]]
+  Vifm lleva el uso de las teclas de vim a otro nivel. Prácticamente todos los comandos de vim están en vifm, incluso es necesario presionar :q para cerrarlo, mientras otros solamente necesitan que presionemos q. Incluye muchas opciones interesantes y apunta a incorporar muchas más para acercarse a midnight commander. Incorpora el mismo sistema de mc de tener 2 paneles en pantalla pudiendo movernos entre ellos y facilitando el movimiento de archivos. Vifm es perfecto para aquellas personas que sean usuarias expertas de vim y deseen alejarse lo menos posible de sus atajos de teclado, pero la persona normal quizá se sienta un poco intimidado ante tanto vim.
+
+*** nnn (Noice is Not Noice)
+[[file:/img/fm-nnn.png]]
+
+Mi explorador de archivos actual. A diferencia de los anteriores busca ser muy minimalista a la vez que lleno de opciones. Carece de cosas "innecesarias" como panel dual (puedes abrir dos ventanas mejor) o previsualizaciones de archivos, pero compensa esto con muchas opciones integradas como descomprimir archivos o "navegar mientras escribes", que solo muestra los archivos y carpetas que coinciden con tu búsqueda, una gran velocidad de funcionamiento, además de poder ejecutar scripts personales directamente sobre los archivos, varios disponibles en el github del proyecto. Personalmente he tenido muy buena experiencia al reportar bugs, pues el desarrollador siempre responde y, de ser posible, ofrece soluciones. Quizá lo único negativo para los usuarios de vim sea que, aunque nos movemos con hjkl, el resto de atajos son... raros, P para pegar, V para mover, d para activar la vista detallada, esto resulta confuso al inicio junto con su interfaz quizá muy minimalista para ciertos gustos.
+
+*** fff (Fucking Fast File-manager)
+  [[file:/img/fm-fff.png]]
+    
+Un gestor de archivos escrito en bash, gracias a esto es súper rápido, según el desarrollador. Me recuerda mucho a nnn y la inspiración parece muy obvia, sin embargo, fff puede agradar un poco más al incorporar resaltados al momento de copiar archivos, más variables para personalizar, entre ellas los atajos de teclado y los colores; en incluso permite previsualizar imágenes directamente en la terminal. La falta de soporte para scripts y de una vista detallada me hacen decantarme por nnn, pero es una gran opción a tomar en cuenta y a la cual  le tengo un ojo encima para ver como avanza.
